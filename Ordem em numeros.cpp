@@ -1,16 +1,17 @@
 #include <bits/stdc++.h>
 
+
 using namespace std;
 
 int main()
 {
     int vetor[5],aux;
+    srand(time(NULL));
 
-    vetor[0]=500;
-    vetor[1]=400;
-    vetor[2]=300;
-    vetor[3]=200;
-    vetor[4]=100;
+    for(int p=0;p<5;p++)
+    {
+        vetor[p]= rand() % 1000 + 100;;
+    }
 
     puts("antes");
     for(int u=0;u<5;u++)
