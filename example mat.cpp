@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
     int quantvert,quantiligas;
+    cin>>quantiligas>>quantvert;
 
     int matverts[quantiligas][quantvert];
 
