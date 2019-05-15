@@ -22,7 +22,7 @@ void getprint(vector<pessoas> pes, int quant,vector<int>a,vector<int>d)
 int main()
 {
     string nome;
-    int i,quantiligas,j,k;
+    int i,quantiligas,x,y;
     vector<pessoas> pessoas;
     vector<int> linhas,colunas;
 
@@ -42,26 +42,22 @@ int main()
     cin>>quantiligas;
 
     puts("Fale as ligações ..");
-    vector<int>x,y;
-    x.resize(quantiligas);
-    y.resize(quantiligas);
-    for(i=0;i<quantiligas;i++)
+    int mat[quantpes][quantpes];
+    for(x=0;x<quantpes;x++)
     {
-        cin>>j>>k;
-        x.push_back(j);
-        y.push_back(k);
-    }
-    getprint(pessoas,quantpes,x,y);
-    for(i=0;i<quantpes;i++)
-    {
-        for(int w=0;w<quantpes;w++)
+        for(y=0;y<quantpes;y++)
         {
-            if(i==x[w]&&y[i]==w)
-            {
-                cout<<1<<endl;
-            }
+            cin>>mat[x][y];
         }
     }
-
+    getprint(pessoas,quantpes,linhas,colunas);
+    for(x=0;x<quantpes;x++)
+    {
+        for(y=0;y<quantpes;y++)
+        {
+            cout<<mat[x][y]<<" ";
+        }
+        puts("");
+    }
 
 }
