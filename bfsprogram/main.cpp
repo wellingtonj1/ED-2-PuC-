@@ -37,6 +37,8 @@ int main()
     {
         getline(cin,nome);
         pessoas[i].setnome(nome);
+        pessoas[i].setnump(i);
+        cout<<"Num da pessoa ="<<pessoas[i].getnum()<<endl;
     }
     puts("Quantidade de ligações?");
     cin>>quantiligas;
@@ -61,3 +63,4 @@ int main()
     }
 
 }
+

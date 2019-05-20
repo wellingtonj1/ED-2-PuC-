@@ -7,6 +7,7 @@ class pessoas
 {
 private:
     string pessoa;
+    int nump;
 
 public:
     void setnome(string nome)
@@ -17,6 +18,9 @@ public:
     {
         return pessoa;
     }
+    void setnump(int x){nump=x;}
+    int getnum(){return nump;}
+
     pessoas();
 };
 
